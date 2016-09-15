@@ -1,0 +1,15 @@
+<form>
+    <h3 class="page-header" style="margin-top: 10px;">Reddit | Add a Link</h3>
+    <div class="form-group">
+        <label for="title">Title:</label> 
+        <input class="form-control" name="title" #newtitle>
+    </div>
+    <div class="form-group">
+        <label for="link">Link:</label>
+        <input class="form-control" name="link" #newlink>
+    </div>
+    <button (click)="addArticle(newtitle, newlink)" class="btn btn-default">Submit Link</button>
+</form>
+<div>
+    <reddit-article *ngFor="#article of sortedArticles()" [article]="article"></reddit-article>
+</div>

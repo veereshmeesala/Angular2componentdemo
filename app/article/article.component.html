@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-2 text-center" style="background-color: #eee"> 
+       <p style="font-size: 30px; font-weight: 700;"> {{ article.votes }}  </p>
+       <p>points</p>
+    </div>
+    <div class="col-md-10">
+        <p>
+            <a class="" href="{{ article.link }}"> {{ article.title }}</a>
+        </p>
+        <p>
+            <span class="item">
+                <a href (click)="voteUp()" class="btn btn-default">
+                    <i class="arrow up icon"></i> upvote
+                </a>
+            </span>
+            <span class="item">
+                <a href (click)="voteDown()" class="btn btn-default">
+                    <i class="arrow down icon"></i> downvote
+                </a>
+            </span>
+        </p>
+    </div>
+
+</div>
