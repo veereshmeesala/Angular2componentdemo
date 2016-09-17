@@ -19,17 +19,20 @@
         <nav class="navbar-default sidebar" role="navigation">
             <ul class="nav in">
                 <li>
-                    <a href="">Reddit</a>
+                    <a href="" [routerLink]="['Reddit']">Reddit</a>
                 </li>
                 <li>
-                    <a href="">Product</a>
+                    <a href="" [routerLink]="['ProductList']">Product</a>
+                </li>
+                <li>
+                    <a href="" [routerLink]="['Tabs']">Tabs</a>
                 </li>
             </ul>
 
         </nav>
     </div>
-    <div class="col-md-7">
-        <reddit></reddit>
+    <div class="col-md-9">
+        <router-outlet></router-outlet>
     </div>
 </div>
 

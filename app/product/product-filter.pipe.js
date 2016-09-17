@@ -11,40 +11,32 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var ArticleComponent;
+    var ProductFilterPipe;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            ArticleComponent = (function () {
-                function ArticleComponent() {
+            ProductFilterPipe = (function () {
+                function ProductFilterPipe() {
                 }
-                ArticleComponent.prototype.voteUp = function () {
-                    this.article.voteUp();
-                    return false;
+                ProductFilterPipe.prototype.transform = function (value, args) {
+                    var filter = args[0] ? args[0].toLocaleLowerCase() : null;
+                    return filter ? value.filter(function (product) {
+                        return product.productName.toLocaleLowerCase().indexOf(filter) != -1;
+                    }) : value;
                 };
-                ArticleComponent.prototype.voteDown = function () {
-                    this.article.voteDown();
-                    return false;
-                };
-                ArticleComponent = __decorate([
-                    core_1.Component({
-                        selector: 'reddit-article',
-                        inputs: ['article'],
-                        host: {
-                            class: 'row'
-                        },
-                        templateUrl: 'app/article/article.component.html'
+                ProductFilterPipe = __decorate([
+                    core_1.Pipe({
+                        name: 'productFilter'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], ArticleComponent);
-                return ArticleComponent;
+                ], ProductFilterPipe);
+                return ProductFilterPipe;
             }());
-            exports_1("ArticleComponent", ArticleComponent);
-            ;
+            exports_1("ProductFilterPipe", ProductFilterPipe);
         }
     }
 });
-//# sourceMappingURL=article.component.js.map
+//# sourceMappingURL=product-filter.pipe.js.map

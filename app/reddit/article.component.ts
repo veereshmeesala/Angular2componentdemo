@@ -7,7 +7,7 @@ import { Article } from './article';
     host: {
         class: 'row'
     },
-    templateUrl: 'app/article/article.component.html'
+    templateUrl: 'app/reddit/article.component.html'
 })
 export class ArticleComponent {
     article: Article;

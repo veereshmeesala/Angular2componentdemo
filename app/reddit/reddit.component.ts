@@ -1,9 +1,8 @@
 import { Component } from 'angular2/core';
-import { ArticleComponent } from '../article/article.component';
-import { Article } from '../article/article';
+import { ArticleComponent } from './article.component';
+import { Article } from './article';
 
 @Component({
-    selector: 'reddit',
     directives: [ArticleComponent],
     templateUrl: 'app/reddit/reddit.component.html'
 })

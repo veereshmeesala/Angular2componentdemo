@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../article/article.component', '../article/article'], function(exports_1, context_1) {
+System.register(['angular2/core', './article.component', './article'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -43,7 +43,6 @@ System.register(['angular2/core', '../article/article.component', '../article/ar
                 };
                 Reddit = __decorate([
                     core_1.Component({
-                        selector: 'reddit',
                         directives: [article_component_1.ArticleComponent],
                         templateUrl: 'app/reddit/reddit.component.html'
                     }), 
